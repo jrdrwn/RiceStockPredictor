@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnPredict.isEnabled = false
         predictionHelper = PredictionHelper(
             context = this,
             onResult = { result -> binding.tvResult.text = result },
@@ -26,7 +27,9 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             },
-            onDownloadSuccess = {}
+            onDownloadSuccess = {
+                binding.btnPredict.isEnabled = true
+            }
         )
         binding.btnPredict.setOnClickListener {
             val input = binding.edSales.text.toString()

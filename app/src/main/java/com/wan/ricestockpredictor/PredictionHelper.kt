@@ -48,9 +48,10 @@ class PredictionHelper(
             .build()
         FirebaseModelDownloader.getInstance()
             .getModel("Rice-Stock", DownloadType.LOCAL_MODEL, conditions)
-            .addOnSuccessListener { modelName: CustomModel ->
+            .addOnSuccessListener { model: CustomModel ->
                 try {
                     onDownloadSuccess()
+                    initializeInterpreter(model)
                 } catch (e: IOException) {
                     onError(e.message.toString())
                 }
@@ -78,6 +79,10 @@ class PredictionHelper(
             }
             if (model is ByteBuffer) {
                 interpreter = InterpreterApi.create(model, options)
+            } else if (model is CustomModel) {
+                model.file?.let {
+                    interpreter = InterpreterApi.create(it, options)
+                }
             }
         } catch (e: Exception) {
             onError(e.message.toString())
