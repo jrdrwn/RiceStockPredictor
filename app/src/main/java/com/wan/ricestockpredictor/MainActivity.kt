@@ -25,7 +25,8 @@ class MainActivity : AppCompatActivity() {
                     errorMessage,
                     Toast.LENGTH_SHORT
                 ).show()
-            }
+            },
+            onDownloadSuccess = {}
         )
         binding.btnPredict.setOnClickListener {
             val input = binding.edSales.text.toString()
