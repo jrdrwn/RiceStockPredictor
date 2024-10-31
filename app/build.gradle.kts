@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -51,4 +52,8 @@ dependencies {
 
     implementation(libs.play.services.tflite.java)
     implementation(libs.play.services.tflite.gpu)
+
+    implementation(platform("com.google.firebase:firebase-bom:33.5.1"))
+    implementation("com.google.firebase:firebase-ml-modeldownloader:24.2.1")
+
 }

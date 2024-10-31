@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "701277292298",
+    "project_id": "quickstart-1600544989718",
+    "storage_bucket": "quickstart-1600544989718.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701277292298:android:dcc0f9e8d8917fb2f05cf3",
+        "android_client_info": {
+          "package_name": "com.wan.ricestockpredictor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "701277292298-s4lk8oqfh4bb0p3nutq6ulop728vgkm3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwKOp3RZejJUZ9W6o_gL5XBIc6tJwEOUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "701277292298-s4lk8oqfh4bb0p3nutq6ulop728vgkm3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
